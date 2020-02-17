@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{F9837AF3-8FA3-4F45-8525-48BF0D761BEB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{35F98725-D3D9-46B1-B3F3-FB84C67B0A98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Provider", "Provider", "{6F194969-1631-46FC-B8AF-26049E4096BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{C1A22D9B-829E-4F31-A8E1-01C9683E2BEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B5FD8033-77E1-43E3-A97D-AA74F514A97D}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Detectify.ServerDetection.API.Entities", "Detectify.ServerDetection.API.Entities\Detectify.ServerDetection.API.Entities.csproj", "{51A9E4C9-07EB-48BA-B7E4-387A1E4C0660}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Detectify.ServerDetection.API.Web", "Detectify.ServerDetection.API.Host\Detectify.ServerDetection.API.Web.csproj", "{B61E9C56-1198-4C62-A751-E268A82B3725}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Detectify.ServerDetection.API.Provider", "Detectify.ServerDetection.API.Provider\Detectify.ServerDetection.API.Provider.csproj", "{20787637-3993-41AA-8AEB-E25EB9BCB51B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Detectify.ServerDetection.API.Provider.Test", "Detectify.ServerDetection.API.Provider.Test\Detectify.ServerDetection.API.Provider.Test.csproj", "{705BBA35-69BD-4F26-8344-4EC4C1827472}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Detectify.ServerDetection.API.Repository", "Detectify.ServerDetection.API.Repository\Detectify.ServerDetection.API.Repository.csproj", "{6746615B-AECC-4985-959F-78A049FAAEDF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51A9E4C9-07EB-48BA-B7E4-387A1E4C0660}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51A9E4C9-07EB-48BA-B7E4-387A1E4C0660}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51A9E4C9-07EB-48BA-B7E4-387A1E4C0660}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51A9E4C9-07EB-48BA-B7E4-387A1E4C0660}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B61E9C56-1198-4C62-A751-E268A82B3725}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B61E9C56-1198-4C62-A751-E268A82B3725}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B61E9C56-1198-4C62-A751-E268A82B3725}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B61E9C56-1198-4C62-A751-E268A82B3725}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20787637-3993-41AA-8AEB-E25EB9BCB51B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20787637-3993-41AA-8AEB-E25EB9BCB51B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20787637-3993-41AA-8AEB-E25EB9BCB51B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20787637-3993-41AA-8AEB-E25EB9BCB51B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{705BBA35-69BD-4F26-8344-4EC4C1827472}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{705BBA35-69BD-4F26-8344-4EC4C1827472}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{705BBA35-69BD-4F26-8344-4EC4C1827472}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{705BBA35-69BD-4F26-8344-4EC4C1827472}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6746615B-AECC-4985-959F-78A049FAAEDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6746615B-AECC-4985-959F-78A049FAAEDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6746615B-AECC-4985-959F-78A049FAAEDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6746615B-AECC-4985-959F-78A049FAAEDF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{51A9E4C9-07EB-48BA-B7E4-387A1E4C0660} = {35F98725-D3D9-46B1-B3F3-FB84C67B0A98}
+		{B61E9C56-1198-4C62-A751-E268A82B3725} = {F9837AF3-8FA3-4F45-8525-48BF0D761BEB}
+		{20787637-3993-41AA-8AEB-E25EB9BCB51B} = {6F194969-1631-46FC-B8AF-26049E4096BC}
+		{705BBA35-69BD-4F26-8344-4EC4C1827472} = {6F194969-1631-46FC-B8AF-26049E4096BC}
+		{6746615B-AECC-4985-959F-78A049FAAEDF} = {C1A22D9B-829E-4F31-A8E1-01C9683E2BEE}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F76A4C5-29AA-4D40-B79D-D55DAF63E2F4}
+	EndGlobalSection
+EndGlobal
