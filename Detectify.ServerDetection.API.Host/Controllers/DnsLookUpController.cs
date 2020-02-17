@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Detectify.ServerDetection.API.Entities;
 using Detectify.ServerDetection.API.Provider;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,6 +16,7 @@ namespace Detectify.ServerDetection.API.Web.Controllers
     /// </summary>
     [Route("api/dns/lookup")]
     [ApiController]
+    [Authorize]
     public class DnsLookUpController : ControllerBase
     {
 
@@ -42,7 +44,7 @@ namespace Detectify.ServerDetection.API.Web.Controllers
             Dictionary<string, string[]> response = new Dictionary<string, string[]>();
 
             List<DnsDetail> dnsDetails = await this.dnsDetailProvider.GetDnsDetailsAsync(dnsList);
-            var selectedWebServers = dnsDetails.Where(t => t.WebServer.Contains(servername)).ToList();
+            var selectedWebServers = dnsDetails.Where(t => t.WebServer.Contains(servername.ToLower(), StringComparison.OrdinalIgnoreCase)).ToList();
             selectedWebServers.ForEach(k =>
             {
                 this.cacheManager.Put<DnsDetail>(k.Name, k);

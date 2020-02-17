@@ -23,7 +23,7 @@ namespace Detectify.ServerDetection.API.Provider
                     dnsDetail = new DnsDetail
                     {
                         Name = hostName,
-                        WebServer = serverName,
+                        WebServer = string.IsNullOrEmpty(serverName) ? string.Empty : serverName,
                         IPAddresses = await this.GetIpAddressesAsync(hostName)
                     };
                 }

@@ -60,6 +60,7 @@ namespace Detectify.ServerDetection.API.Web
             app.UseExceptionHandlerService();
             app.UseHttpsRedirection();
             app.UseRouting();
+            app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
