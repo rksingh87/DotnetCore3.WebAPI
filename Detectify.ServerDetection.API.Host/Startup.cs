@@ -52,13 +52,14 @@ namespace Detectify.ServerDetection.API.Web
         /// <param name="env"></param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+            //if (env.IsDevelopment())
+            //{
+            //    app.UseDeveloperExceptionPage();
+            //}
             app.UseCors(CorsConfigurationService.ALLOW_ALL_ORIGINS_POLICY);
-            app.UseExceptionHandlerService();
+            
             app.UseHttpsRedirection();
+            app.UseExceptionHandlerService();
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
@@ -66,7 +67,6 @@ namespace Detectify.ServerDetection.API.Web
             {
                 endpoints.MapControllers();
             });
-
             app.UseSwaggerUI();
         }
     }
