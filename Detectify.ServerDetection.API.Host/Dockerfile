@@ -10,16 +10,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-sac2016 AS build
 WORKDIR /src
-COPY ["Detectify.ServerDetection.API.Host/Detectify.ServerDetection.API.Host.csproj", "Detectify.ServerDetection.API.Host/"]
-RUN dotnet restore "Detectify.ServerDetection.API.Host/Detectify.ServerDetection.API.Host.csproj"
+COPY ["Detectify.ServerDetection.API.Web/Detectify.ServerDetection.API.Web.csproj", "Detectify.ServerDetection.API.Web/"]
+RUN dotnet restore "Detectify.ServerDetection.API.Web/Detectify.ServerDetection.API.Web.csproj"
 COPY . .
-WORKDIR "/src/Detectify.ServerDetection.API.Host"
-RUN dotnet build "Detectify.ServerDetection.API.Host.csproj" -c Release -o /app/build
+WORKDIR "/src/Detectify.ServerDetection.API.Web"
+RUN dotnet build "Detectify.ServerDetection.API.Web.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "Detectify.ServerDetection.API.Host.csproj" -c Release -o /app/publish
+RUN dotnet publish "Detectify.ServerDetection.API.Web.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Detectify.ServerDetection.API.Host.dll"]
+ENTRYPOINT ["dotnet", "Detectify.ServerDetection.API.Web.dll"]
